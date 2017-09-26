@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html>
+	<head>
+		<title>Users' Page</title>
+	</head>
+	<body>
+
+		{% if input %}
+
+		<h1>Here are your Users for app_afresh</h1>
+
+		<ol>
+			{% for i in input %}
+
+			<li>User Info</li>
+				<ul>
+					<li>First Name: {{ i.firstname }}</li>
+					<li>Last Name: {{ i.lastname }}</li>
+					<li>Email: {{ i.email }}</li>
+				</ul>
+			{% endfor %}
+		</ol>
+
+		{% else %}
+
+		<h1>There is some error in the Network.. Try Again later..</h1>
+
+		{% endif %}
+	</body>
+	</html>
